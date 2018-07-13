@@ -1,9 +1,7 @@
-# threat_hunting_tables
-
 Process related threat hunting notes in flat file format and mapped to MITRE's ATT&CK IDs
 ATT&CK (@MITREattack) | Twitter
 
-Check column headers for key values.The index number is arbitrary.
+Check column headers for key values. The index number is arbitrary.
 
 
 This page is combination of notes I've taken from several sources-
