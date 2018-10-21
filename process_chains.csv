@@ -1,18 +1,18 @@
 chain_id,os,parent_process,commandline_string,sub_process_1,sub_process_2,loaded_dll,registry_path,registry_value,file_path,file_value,frequency,mitre_caption,mitre_attack,itw_sample
-100001,windows,[a-z0-9]{1}.exe,,,,,,,,,rare,obfuscation,T1036,3d77bf4f5d40aa7fff1c59058bf89e0349fa14e3260bbc290b836cbb1e1a17b7
-100002,windows,*.exe,,,,,,,\Recycle.bin,,rare,masquerading,T1037,
-100003,windows,*.exe,,,,,,,\Users\All Users\,,rare,masquerading,T1038,
-100004,windows,*.exe,,,,,,,\Users\Default\,,rare,masquerading,T1039,
-100005,windows,*.exe,,,,,,,\Users\Public\,,rare,masquerading,T1040,
-100006,windows,*.exe,,,,,,,\Perflogs\,,rare,masquerading,T1041,
-100007,windows,*.exe,,,,,,,\config\systemprofile\,,rare,masquerading,T1042,
-100008,windows,*.exe,,,,,,,\Windows\Fonts\,,rare,masquerading,T1043,
-100009,windows,*.exe,,,,,,,\Windows\IME\,,rare,masquerading,T1044,
-100010,windows,*.exe,,,,,,,\Windows\addins\,,rare,masquerading,T1045,
-100011,windows,*.exe,,,,,,,\ProgramData\,,rare,masquerading,T1046,
-100012,windows,eventvwr.exe,,,,,HKEY_USERS\*\mscfile\shell\open\command,,,,high,bypass_uac,T1047,
+100001,windows,[a-z0-9]{1}.exe,,,,,,,,,rare,obfuscation,T1027,3d77bf4f5d40aa7fff1c59058bf89e0349fa14e3260bbc290b836cbb1e1a17b7
+100002,windows,*.exe,,,,,,,\Recycle.bin,,rare,masquerading,T1036,
+100003,windows,*.exe,,,,,,,\Users\All Users\,,rare,masquerading,T1036,
+100004,windows,*.exe,,,,,,,\Users\Default\,,rare,masquerading,T1036,
+100005,windows,*.exe,,,,,,,\Users\Public\,,rare,masquerading,T1036,
+100006,windows,*.exe,,,,,,,\Perflogs\,,rare,masquerading,T1036,
+100007,windows,*.exe,,,,,,,\config\systemprofile\,,rare,masquerading,T1036,
+100008,windows,*.exe,,,,,,,\Windows\Fonts\,,rare,masquerading,T1036,
+100009,windows,*.exe,,,,,,,\Windows\IME\,,rare,masquerading,T1036,
+100010,windows,*.exe,,,,,,,\Windows\addins\,,rare,masquerading,T1036,
+100011,windows,*.exe,,,,,,,\ProgramData\,,rare,masquerading,T1036,
+100012,windows,eventvwr.exe,,,,,HKEY_USERS\*\mscfile\shell\open\command,,,,high,bypass_uac,T1088,
 100013,windows,bitsadmin.exe,,,,,,,,,low,file_transfer,T1068,https://www.joesecurity.org/reports/report-1144eeaebb15044fa64f4d9bb5670349.html#startup
-100014,windows,certutil.exe,-decode,,,,,,,,rare,obfuscation,T1140,c0d67fa9ef4292d1e6f18005163f1d86fbe18f68a6ef70e0744f12b12f44cf7c
+100014,windows,certutil.exe,-decode,,,,,,,,rare,deobfuscation,T1140,c0d67fa9ef4292d1e6f18005163f1d86fbe18f68a6ef70e0744f12b12f44cf7c
 100015,windows,control.exe,,rundll32.exe,,malware.dll,,,,,low,module_load,T1129,
 100016,windows,cscript.exe,,*.jse,,,,,,,rare,scripting,T1064,ed01ebfbc9eb5bbea545af4d01bf5f1071661840480439c6e5babe8e080e41aa
 100017,windows,cscript.exe,,*.vbe,,,,,,,rare,scripting,T1064,ed01ebfbc9eb5bbea545af4d01bf5f1071661840480439c6e5babe8e080e41aa
@@ -20,7 +20,7 @@ chain_id,os,parent_process,commandline_string,sub_process_1,sub_process_2,loaded
 100019,windows,cscript.exe,,*.vba,,,,,,,rare,scripting,T1064,ed01ebfbc9eb5bbea545af4d01bf5f1071661840480439c6e5babe8e080e41aa
 100020,windows,cscript.exe,,*.vbs,,,,,,,high,scripting,T1064,9feb89d55680071ce79f32529591bd3d51536f9e08672cb79d0ab81b57cf905d
 100021,windows,csrsr.exe,,,,,,,,,rare,masquerading,T1036,
-100022,windows,csrss.exe,,,,,,,!=*\Windows\System32\,,rare,obfuscation,T1027,
+100022,windows,csrss.exe,,,,,,,!=*\Windows\System32\,,rare,masquerading,T1036,
 100023,windows,cssrss.exe,,,,,,,,,rare,masquerading,T1036,
 100024,windows,eventvwr.exe,,,,,,,,,low,bypass_uac,T1088,
 100025,windows,excel.exe,,cmd.exe,powershell.exe,,,,,,low,powershell,T1086,
@@ -31,14 +31,14 @@ chain_id,os,parent_process,commandline_string,sub_process_1,sub_process_2,loaded
 100030,windows,excel.exe,,sh.exe,,,,,,,rare,scripting,T1064,
 100031,windows,excel.exe,,bash.exe,,,,,,,rare,scripting,T1064,
 100032,windows,excel.exe,,regsvr32.exe,,,,,,,rare,regsvr32,T1117,
-100033,windows,explorer.exe,,,,,,,!=*\Windows\System32\,,rare,obfuscation,T1027,
+100033,windows,explorer.exe,,,,,,,!=*\Windows\System32\,,rare,masquerading,T1036,
 100034,windows,fsutil.exe,usn deletejournal /D,,,,,,,,rare,indicator_removal,T1070,https://www.joesecurity.org/reports/report-71b6a493388e7d0b40c83ce903bc6b04.html#overview
 100035,windows,iexplore.exe,,,,,,,,,rare,masquerading,T1036,
 100036,windows,isass.exe,,,,,,,,,rare,masquerading,T1036,
 100037,windows,lexplore.exe,,,,,,,,,rare,masquerading,T1036,
-100038,windows,lsm.exe,,,,,,,!=*\Windows\System32\,,rare,obfuscation,T1027,
+100038,windows,lsm.exe,,,,,,,!=*\Windows\System32\,,rare,masquerading,T1036,
 100039,windows,lssass.exe,,,,,,,,,rare,masquerading,T1036,
-100040,windows,mmc.exe,,,,,,,!=*\Windows\System32\,,rare,obfuscation,T1027,
+100040,windows,mmc.exe,,,,,,,!=*\Windows\System32\,,rare,masquerading,T1036,
 100041,windows,msbuild.exe,*MSBuildShell.csproj,,,,,,,,rare,vulnerability_exploit,T1068,https://github.com/Cn33liz/MSBuildShell/blob/master/MSBuildShell.csproj
 100042,windows,mshta.exe,,cmd.exe,powershell.exe,,,,,,low,scripting,T1086,3560481cc51a08c94cd5649b2782ec1395d56d9a1721e6e03720420898772ed0
 100043,windows,mshta.exe,,cscript.exe,,,,,,,low,scripting,T1064,6707264f01730f55c79379d75d29000fb44c92de99b8a1d58588e05963f3dea6
@@ -49,8 +49,8 @@ chain_id,os,parent_process,commandline_string,sub_process_1,sub_process_2,loaded
 100048,windows,net.exe,,,,,,,,,high,net,S0039,
 100049,windows,!=net.exe,,net1.exe,,,,,,,rare,net,S0039,https://www.fireeye.com/blog/threat-research/2017/04/appcompatprocessor.html
 100050,windows,!=wininit.exe,,lsass,,,,,,,rare,masquerading,T1036,https://digital-forensics.sans.org/media/dfir_poster_2014.pdf
-100051,windows,!=powershell.exe,,nslookup,,,,,,,rare,common_port,T1043,
-100052,windows,!=cmd.exe,,nslookup,,,,,,,rare,common_port,T1043,
+100051,windows,!=powershell.exe,,nslookup,,,,,,,rare,commonly_used_port,T1043,
+100052,windows,!=cmd.exe,,nslookup,,,,,,,rare,commonly_used_port,T1043,
 100053,windows,ntdsutil.exe,,,,,,,,ntds.dit,rare,credential dumping,T1003,
 100054,windows,ntvdm.exe,,,,,,,,,low,,,8784be338f3d256d4b4babca9dca7481342be3beea20801e6a99eb82fdd5d512
 100055,windows,odbcconf.exe,,regsvr32.exe,,,,,,,rare,regsvr32,T1117,ccb1fa5cdbc402b912b01a1838c1f13e95e9392b3ab6cc5f28277c012b0759f9
@@ -65,7 +65,7 @@ chain_id,os,parent_process,commandline_string,sub_process_1,sub_process_2,loaded
 100064,windows,powershell.exe,webClient.DownloadString(,,,,,,,,low,powershell,T1086,
 100065,windows,powershell.exe,webClient.DownloadFile,,,,,,,,low,powershell,T1086,
 100066,windows,powershell.exe,webClient.DownloadData,,,,,,,,low,powershell,T1086,https://www.joesandbox.com/analysis/35219/0/html
-100067,windows,rar.exe,,,,,,,,,low,compressed,T1002,
+100067,windows,rar.exe,,,,,,,,,low,data_compressed,T1002,
 100068,windows,reg.exe,,,,,,,,,low,reg,S0075,
 100069,windows,reg32svr.exe,,,,,,,,,rare,,T1117,
 100070,windows,regsvr32.exe,/i (http:|ftp:),,,scrobj.dll,,,,,rare,reg32svr,T1117,
@@ -124,7 +124,7 @@ chain_id,os,parent_process,commandline_string,sub_process_1,sub_process_2,loaded
 100123,windows,*.exe,"\*.exe\:Zone.Identifier:$DATA"" ",,,,,,,,low,alternate_data_stream,T1027,b3c4ae251f8094fa15b510051835c657eaef2a6cea46075d3aec964b14a99f68
 100124,windows,*.exe,,pcalua.exe,,,,,,,rare,service_execution,T1035,https://www.microsoft.com/en-us/wdsi/threats/malware-encyclopedia-description?Name=Ransom:Win32/Sobnot.A
 100125,windows,*.exe,/grant Everyone:F /T /C /Q ,icacls.exe,,,,,,,low,file_systems_permissions_weakness,T1044,ed01ebfbc9eb5bbea545af4d01bf5f1071661840480439c6e5babe8e080e41aa
-100126,windows,winword.exe,,javaw.exe,java.exe,,,,,,low,,S0106,https://www.joesandbox.com/analysis/35201/0/html
+100126,windows,winword.exe,,javaw.exe,java.exe,,,,,,low,scripting,T1064,https://www.joesandbox.com/analysis/35201/0/html
 100127,windows,cmd.exe,dir c: /b /s .docx | findstr /e .docx,,,,,,,,low,data_collection,T1119,
 100128,windows,cmd.exe,<command> | clip,,,,,,,,rare,clipboard_data,T1115,
 100129,windows,cmd.exe,clip < readme.txt,,,,,,,,rare,clipboard_data,T1115,
@@ -165,7 +165,7 @@ chain_id,os,parent_process,commandline_string,sub_process_1,sub_process_2,loaded
 100164,windows,cmd.exe,reg (query|add),,,,HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\Run,,,,high,query_registry,T1012,
 100165,windows,net.exe,view /domain,,,,,,,,low,remote_discovery,T1018,
 100166,windows,qwinsta.exe,/server:,,,,,,,,rare,remote_discovery,T1018,
-100167,windows,InstallUtil.exe,/logfile= /LogToConsole=false /U *.dll,,,,,,,,low,execution,T1018,
+100167,windows,installutil.exe,/logfile= /LogToConsole=false /U *.dll,,,,,,,,low,execution,T1018,
 100168,windows,regsvcs.exe,*.dll,,,,,,,,high,execution,T1121,
 100169,windows,regasm.exe,*.dll,,,,,,,,high,execution,T1121,
 100170,windows,rundll32.exe,*.dll.entrypoint,,,,,,,,low,execution,T1121,
@@ -213,3 +213,4 @@ chain_id,os,parent_process,commandline_string,sub_process_1,sub_process_2,loaded
 100212,windows,caspol.exe,-s off,,,,,,,,rare,web_shell,T1101,https://github.com/api0cradle/LOLBAS/blob/master/OSBinaries/Ieexec.md
 100213,windows,rcpping.exe,-s 127.0.0.1 -t ncacn_np,,,,,,,,low,network_service_scanning,T1046,https://github.com/api0cradle/LOLBAS/blob/master/OSBinaries/Rpcping.md
 100214,windows,rcpping.exe,-s 127.0.0.1 -e 1234 -a privacy -u NTLM,,,,,,,,low,network_service_scanning,T1046,https://github.com/api0cradle/LOLBAS/blob/master/OSBinaries/Rpcping.md
+100215,windows,nltest.exe,,,,,,,,,low,account_discovery,T1087,https://www.hybrid-analysis.com/sample/43bc3efd795f4a1e84f9017f6b39ab331614665b4998e6c806dc8d0417ec314f?environmentId=100
